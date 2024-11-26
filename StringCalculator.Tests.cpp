@@ -9,3 +9,12 @@ TEST(StringCalculatorTestSuite, ExpectZeroForEmptyInput)
   int actualValue = add(input);
   ASSERT_EQ(actualValue, expectedValue);
 }
+
+TEST(StringCalculatorTestSuite, ExpectZeroForCharacters)
+{
+  string input = "gokul";
+  int expectedValue = 0;
+
+  int actualValue = add(input);
+  ASSERT_EQ(actualValue, expectedValue);
+}
