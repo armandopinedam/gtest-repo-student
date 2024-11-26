@@ -1,20 +1,20 @@
 #include "StringCalculator.h"
 
-int checkIsEmpty(string input)
+bool checkIsEmpty(string input)
 {
-    int result = -1;
+    bool result = FALSE;
     if (input.empty()) {
-        result = 0;
+        result = TRUE;
     }
     return result;
 }
 
-int checkIsNoTNumber(string input)
+bool checkIsNotNumber(string input)
 {
-    int result = -1;
+    bool result = FALSE;
     for (char ch : input) {
         if (!isdigit(ch)) {
-            result = 0;
+            result = TRUE;
             break;
         }
     }
@@ -25,8 +25,9 @@ int checkIsNoTNumber(string input)
 int add(string input)
 {
     int result = -1;
-    result = checkIsEmpty(input);
-    result = checkIsNoTNumber(input);
-
+    if(checkIsEmpty(input) || checkIsNotNumber(input))
+    {
+        result = 0;
+    }
     return result;
 }
