@@ -2,19 +2,19 @@
 
 bool checkIsEmpty(string input)
 {
-    bool result = FALSE;
+    bool result = false;
     if (input.empty()) {
-        result = TRUE;
+        result = true;
     }
     return result;
 }
 
 bool checkIsNotNumber(string input)
 {
-    bool result = FALSE;
+    bool result = false;
     for (char ch : input) {
         if (!isdigit(ch)) {
-            result = TRUE;
+            result = true;
             break;
         }
     }
