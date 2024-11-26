@@ -18,3 +18,12 @@ TEST(StringCalculatorTestSuite, ExpectZeroForCharacters)
   int actualValue = add(input);
   ASSERT_EQ(actualValue, expectedValue);
 }
+
+TEST(StringCalculatorTestSuite, ExpectSumForTwoNumbers)
+{
+  string input = "1,2,3";
+  int expectedValue = 6;
+
+  int actualValue = add(input);
+  ASSERT_EQ(actualValue, expectedValue);
+}
