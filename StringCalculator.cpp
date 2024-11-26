@@ -2,5 +2,5 @@
 
 int add(string input)
 {
-  return 0;
+  throw "not implemented";
 }
