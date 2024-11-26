@@ -1,16 +1,32 @@
 #include "StringCalculator.h"
 
-int add(string input)
+int checkIsEmpty(string input)
 {
+    int result = -1;
     if (input.empty()) {
-        return 0;
+        result = 0;
     }
+    return result;
+}
 
+int checkIsNoTNumber(string input)
+{
+    int result = -1;
     for (char ch : input) {
         if (!isdigit(ch)) {
-            return 0;
+            result = 0;
+            break;
         }
     }
-    
-  throw "invalid argument";
+    return result;
+}
+
+
+int add(string input)
+{
+    int result = -1;
+    result = checkIsEmpty(input);
+    result = checkIsNoTNumber(input);
+
+    return result;
 }
